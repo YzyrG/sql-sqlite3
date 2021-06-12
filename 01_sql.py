@@ -1,19 +1,18 @@
 import sqlite3
 
-# create a new datebase
+# create a new database
 conn = sqlite3.connect("new.db")
 
-# get a cursor object used to execute SQL commends
+# create a cursor object used to execute sql statements
 cursor = conn.cursor()
 
-#create a table
+# create a table
 cursor.execute("""CREATE TABLE population
-					(city TEXT,
-					state TEXT,
-					population INT
-					)
-	""") 
+				(city TEXT,
+				state TEXT,
+				population INT
+				)
+	""")
 
-# close the datebase connection
+# close the dadabase connection
 conn.close()
-
